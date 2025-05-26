@@ -5,7 +5,7 @@ import { NAV_LINKS } from "../data/navLinks";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue px-4 py-8">
+    <footer className="bg-blue px-6 py-8">
       <section className="flex text-left">
         {/* <div className="font-bold text-4xl">
           <span className="block">AMH</span>
@@ -21,20 +21,20 @@ const Footer = () => {
         </div>
       </section>
       {/* transformed lives */}
-      <section className="flex gap-4 items-center justify-center mx-6">
+      <section className=" w-full flex flex-col items-center justify-center">
         {footerData.map((data) => {
           const { icon, numbers, textDescription } = data;
           const Icon = icon;
           return (
             <div
               key={numbers}
-              className="bg-cream mb-2 px-6 py-4 rounded-md w-[130px] h-[160px] text-center"
+              className="bg-cream mb-2 px-6 py-8 rounded-md text-center w-full"
             >
               <Icon className="bg-blue text-cloudWhite w-12 h-auto p-2 rounded-md mx-auto" />
               <h2 className="text-blue font-bold text-2xl text-center py-1">
                 {numbers}
               </h2>
-              <p className="w-full text-sm font-regular text-blue font-medium">
+              <p className="w-full text-md font-regular text-blue font-medium">
                 {textDescription}
               </p>
             </div>

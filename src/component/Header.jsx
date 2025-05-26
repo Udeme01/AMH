@@ -6,11 +6,11 @@ const Header = () => {
       <div className="bg-black/40 absolute top-0 right-0 bottom-0 left-0">
         {/* header nav */}
 
-        <header className="bg-cloudWhite py-2 text-blue px-6 flex items-center justify-between">
+        <header className="bg-cloudWhite px-6 py-2 text-blue flex items-center justify-between">
           <h1 className="text-2xl uppercase text-yellow font-semibold">
             Ace Mediation Hub
           </h1>
-          <div className="">
+          <div>
             <Hamburger />
           </div>
         </header>
