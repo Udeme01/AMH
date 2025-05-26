@@ -1,10 +1,8 @@
 import { Squeeze as Hamburger } from "hamburger-react";
-import { Dot } from "lucide-react";
 
 const Header = () => {
   return (
-    <section className="relative bg-[url('/assets/images/henri.jpg')] bg-cover bg-no-repeat bg-center w-full h-screen">
-
+    <section className="relative bg-[url('/assets/images/henri.jpg')] bg-cover bg-no-repeat bg-center w-[100%] h-screen">
       <div className="bg-black/40 absolute top-0 right-0 bottom-0 left-0">
         {/* header nav */}
 
@@ -17,22 +15,20 @@ const Header = () => {
           </div>
         </header>
 
-        <div className="flex items-center justify-center text-center h-[80%] text-white">
-          <div className="px-6 h-[75%]">
-            <h1 className="text-xl text-sunflowerYellow font-bold uppercase mb-4 w-full text-center sm:text-red-600 md:text-green-600 lg:text-purple-600 xl:text-blue-600">
-              Empowering Leader. Legal Mediator. Community Builder.
-            </h1>
-            <p className="text-6xl font-medium py-12 text-left text-cloudWhite">
-              Understanding the rules, Building with{" "}
-              <span className="text-sunflowerYellow">clarity</span>, makes you{" "}
-              <span className="text-sunflowerYellow">unstoppable</span>.
-            </p>
-            <button className="bg-cloudWhite text-blue px-7 py-3 mt-6 text-lg font-semibold capitalize tracking-wide cursor-pointer hover:bg-blue hover:text-cloudWhite">
-              Work with me
-            </button>
-          </div>
+        <div className="px-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-10 items-start">
+          <h1 className="text-xl font-bold uppercase mb-4 w-full text-left text-cloudWhite">
+            Empowering Leaders. Legal Mediator.{" "}
+            <span className="text-sunflowerYellow">Community Builder.</span>
+          </h1>
+          <p className="text-6xl font-medium py- text-left text-cloudWhite">
+            Understanding the rules, Building with{" "}
+            <span className="text-sunflowerYellow">clarity</span>, makes you{" "}
+            <span className="text-sunflowerYellow">unstoppable</span>.
+          </p>
+          <button className="bg-cloudWhite text-blue px-7 py-3 mt-6 text-lg font-semibold capitalize tracking-wide cursor-pointer hover:bg-blue hover:text-cloudWhite">
+            Work with me
+          </button>
         </div>
-
       </div>
     </section>
   );
