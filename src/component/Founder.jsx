@@ -4,14 +4,14 @@ const Founder = () => {
   return (
     <main className="font-montserrat">
       <section className="bg-cloudWhite py-6">
-        <h1 className="text-3xl px-10 pb-3 font-semibold text-blue">About Mr. AdePeters</h1>
+        <h1 className="text-3xl px-6 pb-3 font-semibold text-blue">About Mr. AdePeters</h1>
         <img
           src={founder}
           alt="platform founder"
           className="w-[85%] mx-auto rounded-lg"
         />
       </section>
-      <section className="mx-8 py-4">
+      <section className="mx-6 py-4">
         <h1 className="text-2xl mb-2">Hello Friend,</h1>
         <div className="font-light text-sm flex flex-col gap-6">
           <p>
@@ -45,7 +45,7 @@ const Founder = () => {
           </p>
         </div>
       </section>
-      <button className="bg-blue text-cloudWhite px-7 py-3 text-lg font-semibold capitalize tracking-wide cursor-pointer mx-8 mb-8 mt-2 hover:bg-cloudWhite hover:text-blue">
+      <button className="bg-blue text-cloudWhite px-6 py-3 text-lg font-semibold capitalize tracking-wide cursor-pointer mx-6 mb-8 mt-2 hover:bg-cloudWhite hover:text-blue">
         Discover More
       </button>
     </main>
