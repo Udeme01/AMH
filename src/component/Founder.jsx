@@ -1,4 +1,4 @@
-import founder from "/assets/images/man.jpg";
+import founder from "/assets/images/ade.jpg";
 
 const Founder = () => {
   return (

@@ -5,7 +5,7 @@ import { NAV_LINKS } from "../data/navLinks";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue px-6 py-8">
+    <footer className="bg-blue px-6 py-8 font-montserrat">
       <section className="flex text-left">
         {/* <div className="font-bold text-4xl">
           <span className="block">AMH</span>
