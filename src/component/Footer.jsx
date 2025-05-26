@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
       </section>
       {/* transformed lives */}
-      <section className="flex gap-4 items-center justify-center">
+      <section className="flex gap-4 items-center justify-center mx-6">
         {footerData.map((data) => {
           const { icon, numbers, textDescription } = data;
           const Icon = icon;
