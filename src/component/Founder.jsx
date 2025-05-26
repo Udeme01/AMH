@@ -4,7 +4,7 @@ const Founder = () => {
   return (
     <main className="font-montserrat">
       <section className="bg-cloudWhite py-6">
-        <h1 className="text-3xl px-6 pb-3 font-semibold text-blue">About Mr. AdePeters</h1>
+        <h1 className="text-2xl px-6 pb-3 font-semibold text-blue">About Mr. AdePeters</h1>
         <img
           src={founder}
           alt="platform founder"
@@ -12,7 +12,7 @@ const Founder = () => {
         />
       </section>
       <section className="mx-6 py-4">
-        <h1 className="text-2xl mb-2">Hello Friend,</h1>
+        <h1 className="text-xl mb-2">Hello Friend,</h1>
         <div className="font-light text-sm flex flex-col gap-6">
           <p>
             In a world that often overwhelms, misguides, or silences your true

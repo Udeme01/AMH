@@ -4,7 +4,7 @@ import { WORK_DRIVES } from "../data/workDrives";
 const WorkDrive = () => {
   return (
     <section className="font-montserrat bg-cloudWhite p-6 m-6 rounded-2xl">
-      <h1 className="text-3xl px-6 pb-3 font-semibold capitalize">
+      <h1 className="text-2xl px-6 pb-3 font-semibold capitalize text-center">
         What drives <span className="text-blue">my work</span>
       </h1>
       <div className="flex flex-col text-center gap-8 px-6 my-8">
