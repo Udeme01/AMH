@@ -2,7 +2,7 @@ import { Squeeze as Hamburger } from "hamburger-react";
 
 const Header = () => {
   return (
-    <section className="relative bg-[url('/assets/images/henri.jpg')] bg-cover bg-no-repeat bg-center w-[100%] h-screen">
+    <section className="relative bg-[url('/assets/images/gather.jpg')] bg-cover bg-no-repeat bg-center w-[100%] h-screen">
       <div className="bg-black/40 absolute top-0 right-0 bottom-0 left-0">
         {/* header nav */}
 
@@ -26,7 +26,7 @@ const Header = () => {
             <span className="text-sunflowerYellow">unstoppable</span>.
           </p>
           <button className="bg-cloudWhite text-blue px-7 py-3 mt-6 text-lg font-semibold capitalize tracking-wide cursor-pointer hover:bg-blue hover:text-cloudWhite">
-            Work with me
+            Explore your path
           </button>
         </div>
       </div>

@@ -1,10 +1,11 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* @theme {
+@theme {
   --font-montserrat: "Montserrat", "sans-serif";
-} */
+}
 
-/* @theme {
+@theme {
   --font-weight-thin: 100;
   --font-weight-extraLight: 200;
   --font-weight-light: 300;
@@ -14,7 +15,7 @@
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
-} */
+}
 
 @theme {
   --color-cream: #f7cca5;
