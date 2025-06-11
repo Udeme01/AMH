@@ -3,6 +3,7 @@ import { Squeeze as Hamburger } from "hamburger-react";
 
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
+import { Link } from "react-router";
 
 // Mock navigation data - replace with your actual data
 const NAV_LINKS = [
@@ -65,18 +66,14 @@ const Header = () => {
         <div className="max-w-[1300px] mx-auto px-4 lg:py-6">
           <div className="flex items-center justify-between">
             {/* Logo/Brand */}
-            <div className="flex-shrink-0">
-              <a href="/" className="flex items-center space-x-2">
-                <div className="">
-                  <h1 className="text-md font-bold text-white">
-                    Ace Leadership Hub
-                  </h1>
-                  <p className="text-[10px] text-white/60">
-                    Authentic • Mindful • Empowering
-                  </p>
-                </div>
-              </a>
-            </div>
+            <Link to="/">
+              <h1 className="text-md font-bold text-white">
+                Ace Leadership Hub
+              </h1>
+              <p className="text-[10px] text-white/60">
+                Authentic • Mindful • Empowering
+              </p>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:block">
@@ -100,43 +97,37 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden mobile-nav-container">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md"
-                aria-label="Toggle menu"
-              >
-                <Hamburger
-                  toggled={isMenuOpen}
-                  size={24}
-                  duration={0.3}
-                  color={isMenuOpen ? "#3B82F6" : "#ffffff"}
-                />
-              </button>
-            </div>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 lg:hidden mobile-nav-container"
+              aria-label="Toggle menu"
+            >
+              <Hamburger
+                toggled={isMenuOpen}
+                size={20}
+                duration={0.7}
+                color={isMenuOpen ? "#3B82F6" : "#ffffff"}
+              />
+            </button>
           </div>
         </div>
 
         {/* Top Banner (Optional) */}
-        {/* <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 text-sm">
+        <div className="text-white text-center py-2 text-sm">
           <p>
             🎯 <strong>New Program Launch:</strong> Leadership Intensive - Early
             Bird 20% Off!
-            <a href="/programs" className="underline ml-2 hover:text-blue-200">
+            <a href="/" className="underline ml-2 hover:text-blue-200">
               Learn More →
             </a>
           </p>
-        </div> */}
+        </div>
       </header>
-      {/* Mobile Navigation Overlay */}
       <MobileNav
         isOpen={isMenuOpen}
-        onClose={() => setIsMenuOpen(false)}
+        // onClose={() => setIsMenuOpen(false)}
         navLinks={NAV_LINKS}
       />
-      {/* Spacer to prevent content from hiding behind fixed header */}
-      {/* <div className="h-16 lg:h-20"></div> */}
-      {/* <div className="h-10"></div> Additional space for banner */}
     </>
   );
 };

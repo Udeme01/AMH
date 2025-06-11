@@ -1,8 +1,9 @@
+import { faX } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { Link } from "react-router";
 
 const MobileNav = ({ isOpen, onClose, navLinks }) => {
-  const [expandedSection, setExpandedSection] = useState(null);
-
   // Programs submenu items
   const programsSubmenu = [
     {
@@ -32,82 +33,24 @@ const MobileNav = ({ isOpen, onClose, navLinks }) => {
     },
   ];
 
-  // Resources submenu items
-  const resourcesSubmenu = [
-    { name: "Leadership Blog", href: "/blog", icon: "📝" },
-    { name: "Free Assessment", href: "/assessment", icon: "📊" },
-    { name: "Meditation Library", href: "/meditation", icon: "🧘" },
-    { name: "Case Studies", href: "/case-studies", icon: "📚" },
-    { name: "Podcast", href: "/podcast", icon: "🎧" },
-  ];
-
-  const getSubmenuItems = (linkName) => {
-    switch (linkName) {
-      case "Programs":
-        return programsSubmenu;
-      case "Blog":
-        return resourcesSubmenu;
-      default:
-        return [];
-    }
-  };
-
-  const hasSubmenu = (linkName) => {
-    return linkName === "Programs" || linkName === "Blog";
-  };
-
-  const toggleExpanded = (linkName) => {
-    setExpandedSection(expandedSection === linkName ? null : linkName);
-  };
-
-  const handleLinkClick = (linkName, linkTo) => {
-    if (hasSubmenu(linkName)) {
-      // Only toggle the dropdown, don't navigate or close
-      toggleExpanded(linkName);
-    }
-  };
-
   if (!isOpen) return null;
 
   return (
     <>
-      {/* Overlay */}
-      <div
-        className="fixed inset-0 top-0 bottom-0 right-0 left-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-        // onClick={onClose}
-      />
-
       {/* Mobile Menu */}
-      <div
-        className={`fixed z-50 bg-white right-0 left-0 font-montserrat ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
+      <div className={`fixed z-50 bg-white right-0 left-0 font-montserrat`}>
         {/* Header */}
         <div className="bg-slate-900 text-white p-6">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-bold">Leadership Hub</h2>
+              <h2 className="text-xl font-bold">Ace Leadership Hub</h2>
               <p className="text-blue-100 text-sm">Navigate Your Journey</p>
             </div>
             <button
-              //   onClick={onClose}
-              className="p-2 hover:bg-white/20 rounded-full transition-colors"
-              aria-label="Close menu"
+              className="w-10 h-10 border border-white/5 cursor-pointer"
+              //   aria-label="Close menu"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <FontAwesomeIcon icon={faX} className="w-full h-full" />
             </button>
           </div>
         </div>
@@ -118,44 +61,16 @@ const MobileNav = ({ isOpen, onClose, navLinks }) => {
           <nav className="flex-1 py-6">
             <ul className="space-y-2 px-4">
               {navLinks.map((navLink, index) => {
-                const { linkName, linkTo } = navLink;
-                const submenuItems = getSubmenuItems(linkName);
-                const isExpanded = expandedSection === linkName;
-                const hasSubItems = hasSubmenu(linkName);
+                const { linkName } = navLink;
 
                 return (
                   <li key={index}>
                     {/* Main Navigation Item */}
-                    <button className="w-full flex items-center justify-between p-3 text-left text-slate-900 rounded-lg transition-colors font-medium">
-                      <span className="flex items-center space-x-3">
-                        <span className="text-lg">
-                          {linkName === "Home"}
-                          {linkName === "About"}
-                          {linkName === "Speaking"}
-                          {linkName === "Programs"}
-                          {linkName === "Blog"}
-                          {linkName === "Contact"}
-                        </span>
-                        <span>{linkName}</span>
-                      </span>
+                    <button className="w-full h-full flex items-center justify-between p-3 text-left text-slate-900 rounded-lg transition-colors font-medium">
+                      <Link to="/" className="flex items-center space-x-3 px-3">
+                        {linkName}
+                      </Link>
                     </button>
-
-                    {/* Submenu */}
-                    {hasSubItems && isExpanded && (
-                      <div className="ml-4 mt-2 space-y-1 border-l-2 border-blue-100 pl-4 border">
-                        {submenuItems.map((item, itemIndex) => (
-                          <a
-                            key={itemIndex}
-                            href={item.href}
-                            // onClick={onClose}
-                            className="flex items-center space-x-3 p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
-                          >
-                            {/* <span className="text-base">{item.icon}</span> */}
-                            <span className="text-sm">{item.name}</span>
-                          </a>
-                        ))}
-                      </div>
-                    )}
                   </li>
                 );
               })}
