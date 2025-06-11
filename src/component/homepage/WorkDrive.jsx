@@ -1,5 +1,5 @@
 import React from "react";
-import { WORK_DRIVES } from "../data/workDrives";
+import { WORK_DRIVES } from "../../data/workDrives";
 
 const WorkDrive = () => {
   return (
@@ -7,13 +7,13 @@ const WorkDrive = () => {
       <h1 className="text-2xl px-6 pb-3 font-semibold capitalize text-center">
         What drives <span className="text-blue">my work</span>
       </h1>
-      <div className="flex flex-col text-center gap-8 px-6 my-8">
+      <div className="flex flex-col text-center gap-8 px-6 my-8 border md:grid md:grid-cols-3 md:gap-8">
         {WORK_DRIVES.map((workdrive) => {
-          const { icon, titleText, textDescription, color } = workdrive;
+          const { id, icon, titleText, textDescription, color } = workdrive;
           const Icon = icon;
 
           return (
-            <div className="flex flex-col items-center justify-center">
+            <div key={id} className="flex flex-col items-center justify-center">
               <Icon
                 color={color}
                 className={`bg-blue text-cloudWhite w-12 h-auto p-2 rounded-full mx-auto mb-4`}
