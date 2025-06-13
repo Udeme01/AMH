@@ -80,14 +80,16 @@ const Campaign = () => {
 
               {/* Description */}
               <p className="text-base lg:text-lg leading-relaxed max-w-md">
-                Many hard-working Americans have been left behind by the very
-                institutions designed to help them. We can do better for every
-                citizen. We can lift us all up.
+                This campaign is not just a call to action — it's a call to
+                alignment. For too long, many individuals — especially youths,
+                creatives, and even professionals — have been overlooked,
+                unheard, or misrepresented. It's time to rediscover purpose,
+                lead with empathy, and build bridges through understanding.
               </p>
 
               {/* Countdown Timer */}
               <div className="space-y-4">
-                <p className="text-sm font-medium">Elections Start Time:</p>
+                <p className="text-sm font-medium">Campaign Start Time:</p>
 
                 <div className="flex gap-4">
                   <div className="text-center">

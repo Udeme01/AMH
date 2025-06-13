@@ -126,7 +126,7 @@ const Header = () => {
       <MobileNav
         isOpen={isMenuOpen}
         // onClose={() => setIsMenuOpen(false)}
-        navLinks={NAV_LINKS}
+        // navLinks={NAV_LINKS}
       />
     </>
   );

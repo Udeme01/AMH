@@ -1,18 +1,18 @@
 export const NAV_LINKS = [
   {
     linkName: "Home",
-    linkTo: "#",
+    linkTo: "/",
   },
   {
-    linkName: "About Me",
-    linkTo: "#",
+    linkName: "About",
+    linkTo: "about",
   },
   {
     linkName: "Impact",
-    linkTo: "#",
+    linkTo: "impact",
   },
   {
     linkName: "Contact",
-    linkTo: "#",
+    linkTo: "contact",
   },
 ];

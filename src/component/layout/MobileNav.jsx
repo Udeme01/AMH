@@ -1,38 +1,9 @@
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
 import { Link } from "react-router";
+import { NAV_LINKS } from "../../data/navLinks";
 
 const MobileNav = ({ isOpen, onClose, navLinks }) => {
-  // Programs submenu items
-  const programsSubmenu = [
-    {
-      name: "Leadership Intensive",
-      href: "/programs/leadership-intensive",
-      icon: "🎯",
-    },
-    {
-      name: "Creative Breakthrough",
-      href: "/programs/creative-breakthrough",
-      icon: "💡",
-    },
-    {
-      name: "Executive Coaching",
-      href: "/programs/executive-coaching",
-      icon: "👔",
-    },
-    {
-      name: "Youth Empowerment",
-      href: "/programs/youth-empowerment",
-      icon: "🌟",
-    },
-    {
-      name: "Corporate Training",
-      href: "/programs/corporate-training",
-      icon: "🏢",
-    },
-  ];
-
   if (!isOpen) return null;
 
   return (
@@ -60,14 +31,17 @@ const MobileNav = ({ isOpen, onClose, navLinks }) => {
           {/* Main Navigation */}
           <nav className="flex-1 py-6">
             <ul className="space-y-2 px-4">
-              {navLinks.map((navLink, index) => {
-                const { linkName } = navLink;
+              {NAV_LINKS.map((navLink, index) => {
+                const { linkName, linkTo } = navLink;
 
                 return (
                   <li key={index}>
                     {/* Main Navigation Item */}
                     <button className="w-full h-full flex items-center justify-between p-3 text-left text-slate-900 rounded-lg transition-colors font-medium">
-                      <Link to="/" className="flex items-center space-x-3 px-3">
+                      <Link
+                        to={linkTo}
+                        className="flex items-center space-x-3 px-3"
+                      >
                         {linkName}
                       </Link>
                     </button>
