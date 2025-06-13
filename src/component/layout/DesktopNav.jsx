@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-impo
 
 const DesktopNav = ({ navLinks }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
