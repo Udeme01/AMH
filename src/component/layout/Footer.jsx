@@ -222,16 +222,9 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-gray-400">
             <div>
               <p>
-                &copy; {currentYear} Leadership & Empowerment Hub. All rights
+                &copy; {currentYear} Ace Leadership & Empowerment Hub. All rights
                 reserved.
               </p>
-            </div>
-            <div className="flex gap-4">
-              <span>Made with ❤️ in Nigeria</span>
-              <span>•</span>
-              <a href="#" className="hover:text-white transition-colors">
-                Sitemap
-              </a>
             </div>
           </div>
         </div>
