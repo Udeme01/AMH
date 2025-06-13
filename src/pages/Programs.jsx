@@ -2,8 +2,8 @@ import { Link } from "react-router";
 
 const Programs = () => {
   return (
-    <section className="h-[90vh] mt-40 flex flex-col items-center justify-center font-montserrat text-justify mx-6">
-      <h1 className="text-6xl leading-24 font-medium animate-bounce">
+    <section className="h-[90vh] pt-40 flex flex-col items-center justify-center font-montserrat text-justify mx-6">
+      <h1 className="text-4xl leading-24 font-medium animate-bounce">
         Coming Soon!
       </h1>
       <p>We're working hard to finish the development of this feature.</p>
