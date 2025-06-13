@@ -3,6 +3,10 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 import Homepage from "./pages/Homepage";
 import Root from "./pages/Root";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Speaking from "./pages/Speaking";
+import Programs from "./pages/Programs";
+import Blog from "./pages/Blog";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -18,14 +22,22 @@ const App = () => {
           path: "about",
           element: <About />,
         },
-        // {
-        //   path: "impact",
-        //   element: <Impact />,
-        // },
-        // {
-        //   path: "contact",
-        //   element: <Contact />,
-        // },
+        {
+          path: "speaking",
+          element: <Speaking />,
+        },
+        {
+          path: "programs",
+          element: <Programs />,
+        },
+        {
+          path: "blog",
+          element: <Blog />,
+        },
+        {
+          path: "contact",
+          element: <Contact />,
+        },
       ],
     },
   ]);

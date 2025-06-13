@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
 
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 import { Link } from "react-router";
-
-// Mock navigation data - replace with your actual data
-const NAV_LINKS = [
-  { linkName: "Home", linkTo: "/" },
-  { linkName: "About", linkTo: "/about" },
-  { linkName: "Speaking", linkTo: "/speaking" },
-  { linkName: "Programs", linkTo: "/programs" },
-  { linkName: "Blog", linkTo: "/blog" },
-  { linkName: "Contact", linkTo: "/contact" },
-];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -77,7 +67,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:block">
-              <DesktopNav navLinks={NAV_LINKS} />
+              <DesktopNav />
             </div>
 
             {/* Desktop CTA Button */}

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { NAV_LINKS } from "../../data/navLinks";
+import { Link } from "react-router";
 
-const DesktopNav = ({ navLinks }) => {
+const DesktopNav = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   // Programs dropdown items
@@ -89,7 +91,7 @@ const DesktopNav = ({ navLinks }) => {
   return (
     <nav className="relative">
       <ul className="flex items-center space-x-8">
-        {navLinks.map((navLink, index) => {
+        {NAV_LINKS.map((navLink, index) => {
           const { linkName, linkTo } = navLink;
           const dropdownItems = getDropdownItems(linkName);
           const showDropdown =
@@ -102,9 +104,8 @@ const DesktopNav = ({ navLinks }) => {
               onMouseEnter={() => handleMouseEnter(linkName)}
               onMouseLeave={handleMouseLeave}
             >
-              <a
-                // href={hasDropdown(linkName) && "#"}
-                href={linkName}
+              <Link
+                to={linkTo}
                 className={`flex items-center text-sm text-white hover:text-white/50 font-medium transition-colors py-2 cursor-pointer ${
                   showDropdown ? "text-blue-600" : ""
                 }`}
@@ -128,7 +129,7 @@ const DesktopNav = ({ navLinks }) => {
                     />
                   </svg>
                 )}
-              </a>
+              </Link>
 
               {/* Dropdown Menu */}
               {showDropdown && (

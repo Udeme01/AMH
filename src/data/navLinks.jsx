@@ -8,8 +8,16 @@ export const NAV_LINKS = [
     linkTo: "about",
   },
   {
-    linkName: "Impact",
-    linkTo: "impact",
+    linkName: "Speaking",
+    linkTo: "speaking",
+  },
+  {
+    linkName: "Programs",
+    linkTo: "programs",
+  },
+  {
+    linkName: "Blog",
+    linkTo: "blog",
   },
   {
     linkName: "Contact",

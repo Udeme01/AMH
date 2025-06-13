@@ -158,7 +158,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[4/5] max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src={founder}
                   alt="ACE Leadership Hub Founder"
                   className="w-full h-full object-cover"
                 />
@@ -531,7 +531,7 @@ const About = () => {
                 <p className="text-slate-300 leading-relaxed mb-6">
                   {offering.description}
                 </p>
-                <button className="inline-flex items-center gap-2 text-yellow-400 font-medium hover:text-yellow-300 transition-colors group">
+                <button className="inline-flex items-center gap-2 text-yellow-400 font-medium hover:text-yellow-300 transition-colors group cursor-pointer">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -643,34 +643,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-        <div className="container mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-3xl lg:text-4xl font-light mb-6">
-            Ready to{" "}
-            <span className="font-semibold text-yellow-400">Discover</span> Your
-            Authentic Leadership?
-          </h2>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-12">
-            Join thousands of leaders who have transformed their lives and
-            communities through authentic empowerment.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="group px-8 py-4 bg-yellow-500 text-slate-900 font-semibold rounded-lg transition-all duration-300 hover:bg-yellow-400 hover:shadow-xl hover:shadow-yellow-500/25 transform hover:-translate-y-1">
-              <span className="flex items-center justify-center gap-2">
-                <Calendar className="w-5 h-5" />
-                Book a Consultation
-              </span>
-            </button>
-
-            <button className="px-8 py-4 border-2 border-white/30 backdrop-blur-sm font-semibold rounded-lg transition-all duration-300 hover:bg-white/10 hover:border-white/50">
-              Download Free Resources
-            </button>
           </div>
         </div>
       </section>
