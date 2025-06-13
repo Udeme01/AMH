@@ -103,7 +103,8 @@ const DesktopNav = ({ navLinks }) => {
               onMouseLeave={handleMouseLeave}
             >
               <a
-                href={hasDropdown(linkName) && "#"}
+                // href={hasDropdown(linkName) && "#"}
+                href={linkName}
                 className={`flex items-center text-sm text-white hover:text-white/50 font-medium transition-colors py-2 cursor-pointer ${
                   showDropdown ? "text-blue-600" : ""
                 }`}

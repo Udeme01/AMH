@@ -18,14 +18,14 @@ const App = () => {
           path: "about",
           element: <About />,
         },
-        {
-          path: "impact",
-          element: <Impact />,
-        },
-        {
-          path: "contact",
-          element: <Contact />,
-        },
+        // {
+        //   path: "impact",
+        //   element: <Impact />,
+        // },
+        // {
+        //   path: "contact",
+        //   element: <Contact />,
+        // },
       ],
     },
   ]);

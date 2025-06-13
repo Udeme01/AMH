@@ -19,10 +19,10 @@ const Impact = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {IMPACT_CARD.map((impact) => {
+          {IMPACT_CARD.map((impact, index) => {
             const { icon, title, description, color } = impact;
             return (
-              <div className="bg-white py-10 px-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded">
+              <div key={index} className="bg-white py-10 px-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded">
                 <header className="text-center pb-4">
                   <div
                     className="w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
