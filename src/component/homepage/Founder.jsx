@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import founder from "/assets/images/ade.jpg";
 
 const Founder = () => {
@@ -63,7 +64,7 @@ const Founder = () => {
             </p>
           </div>
 
-          <button className="w-full sm:w-auto border-2 border-blue-900 text-blue-900 px-8 py-3 text-lg font-regular capitalize tracking-wide cursor-pointer mt-8 transition-all duration-300 hover:bg-blue-900 hover:text-white hover:shadow-lg active:scale-95">
+          <button className="w-full bg-blue-900 text-white sm:w-auto px-8 py-3 text-lg font-regular capitalize tracking-wide cursor-pointer mt-8 transition-all duration-500 hover:text-white hover:shadow-lg hover:scale-95">
             More about me
           </button>
         </section>
@@ -141,8 +142,8 @@ const Founder = () => {
 
           {/* Clear float to ensure button appears below everything */}
           <div className="clear-left pt-8">
-            <button className="border-2 border-blue-900 text-blue-900 px-8 py-3 text-lg font-regular capitalize tracking-wide cursor-pointer transition-all duration-300 hover:bg-blue-900 hover:text-white hover:shadow-lg active:scale-95">
-              More about me
+            <button className="bg-blue-900 text-white px-8 py-3 text-lg font-regular capitalize tracking-wide cursor-pointer transition-all duration-500 hover:shadow-lg hover:scale-95">
+              <Link to="/about">More about me</Link>
             </button>
           </div>
         </div>

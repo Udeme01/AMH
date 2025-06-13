@@ -80,17 +80,17 @@ const Contact = () => {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
+      name: "Ada Biola",
       role: "Creative Director",
       text: "ACE Leadership Hub transformed not just my leadership style, but my entire approach to authentic communication. The results were immediate and lasting.",
     },
     {
-      name: "Marcus Williams",
+      name: "Sarah Adeyemi",
       role: "Youth Program Coordinator",
       text: "The mediation training I received has been invaluable in my work with young people. The empathy-based approach creates real connections.",
     },
     {
-      name: "Jennifer Rodriguez",
+      name: "Oluborode Peter",
       role: "Marketing Manager",
       text: "The corporate workshop energized our entire team. We've seen a 40% improvement in collaboration and communication effectiveness.",
     },

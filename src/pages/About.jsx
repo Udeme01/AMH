@@ -56,21 +56,21 @@ const About = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Sarah Adeyemi",
       role: "Creative Director, Tech Startup",
       quote:
         "The clarity I gained about my authentic leadership style transformed not just my career, but my entire approach to life.",
       rating: 5,
     },
     {
-      name: "Michael Chen",
+      name: "Michael Sanwo-Olu",
       role: "Community Leader",
       quote:
         "Learning to speak up without desperation while maintaining empathy - this changed everything in my advocacy work.",
       rating: 5,
     },
     {
-      name: "Aisha Okonkwo",
+      name: "Aisha Kosoko",
       role: "Young Entrepreneur",
       quote:
         "ACE Leadership Hub taught me that being who I am supposed to be is not just enough - it is everything.",

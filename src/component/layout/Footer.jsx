@@ -1,18 +1,18 @@
-import React from "react";
-
-// Mock data - replace with your actual data imports
-const footerData = [
-  { icon: "👥", numbers: "500+", textDescription: "Lives Transformed" },
-  { icon: "🏢", numbers: "50+", textDescription: "Organizations Served" },
-  { icon: "⭐", numbers: "10+", textDescription: "Years of Experience" },
-];
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedinIn,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 const socialLinks = [
-  { icon: "📘", platform: "Facebook", url: "#" },
-  { icon: "🐦", platform: "Twitter", url: "#" },
-  { icon: "💼", platform: "LinkedIn", url: "#" },
-  { icon: "📸", platform: "Instagram", url: "#" },
-  { icon: "📺", platform: "YouTube", url: "#" },
+  { icon: faFacebook, platform: "Facebook", url: "#" },
+  { icon: faTwitter, platform: "Twitter", url: "#" },
+  { icon: faLinkedinIn, platform: "LinkedIn", url: "#" },
+  { icon: faInstagram, platform: "Instagram", url: "#" },
+  { icon: faYoutube, platform: "YouTube", url: "#" },
 ];
 
 const NAV_LINKS = [
@@ -52,7 +52,7 @@ const Footer = () => {
                   href="mailto:hello@leadershiphub.com"
                   className="hover:text-white transition-colors"
                 >
-                  hello@leadershiphub.com
+                  aceleadershiphub@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -191,7 +191,7 @@ const Footer = () => {
                   className="bg-slate-800 hover:bg-blue-600 p-2 rounded-lg transition-colors"
                   aria-label={social.platform}
                 >
-                  <span className="text-lg">{social.icon}</span>
+                  <FontAwesomeIcon icon={social.icon} className="text-lg" />
                 </a>
               ))}
             </div>
