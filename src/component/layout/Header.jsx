@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
 
 import MobileNav from "./MobileNav";
@@ -8,6 +8,19 @@ import { Link } from "react-router";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const marqueeRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (marqueeRef.current) {
+      marqueeRef.current.stop();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (marqueeRef.current) {
+      marqueeRef.current.start();
+    }
+  };
 
   // Handle scroll effect
   useEffect(() => {
@@ -47,7 +60,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-montserrat ${
+        className={`${
           isScrolled
             ? "bg-slate-900/50 backdrop-blur-md shadow-lg"
             : "bg-slate-900 py-2"
@@ -57,10 +70,10 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo/Brand */}
             <Link to="/">
-              <h1 className="text-md font-bold text-white">
+              <h1 className="text-size-base font-semibold text-white leading-h-base">
                 Ace Leadership Hub
               </h1>
-              <p className="text-[10px] text-white/60">
+              <p className="text-size-xs text-white/50">
                 Authentic • Mindful • Empowering
               </p>
             </Link>
@@ -89,7 +102,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 lg:hidden mobile-nav-container"
+              className="lg:hidden mobile-nav-container"
               aria-label="Toggle menu"
             >
               <Hamburger
@@ -103,14 +116,20 @@ const Header = () => {
         </div>
 
         {/* Top Banner (Optional) */}
-        <div className="text-white text-center py-2 text-sm">
-          <p>
-            🎯 <strong>New Program Launch:</strong> Leadership Intensive - Early
-            Bird 20% Off!
-            <a href="/" className="underline ml-2 hover:text-blue-200">
-              Learn More →
-            </a>
-          </p>
+        <div className="text-white text-center font-light text-size-xs">
+          <marquee
+            ref={marqueeRef}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <p className="w-full cursor-pointer">
+              🎯 <strong className="font-medium">New Program Launch:</strong>{" "}
+              Leadership Intensive - Early Bird 20% Off!
+              <Link to="/" className="underline ml-2 hover:text-blue-200">
+                Learn More →
+              </Link>
+            </p>
+          </marquee>
         </div>
       </header>
       <MobileNav

@@ -70,7 +70,7 @@ const About = () => {
       rating: 5,
     },
     {
-      name: "Aisha Kosoko",
+      name: "Aisha ",
       role: "Young Entrepreneur",
       quote:
         "ACE Leadership Hub taught me that being who I am supposed to be is not just enough - it is everything.",

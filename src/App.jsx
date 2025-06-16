@@ -1,12 +1,17 @@
 import { RouterProvider, createBrowserRouter } from "react-router";
 
-import Homepage from "./pages/Homepage";
 import Root from "./pages/Root";
+import Homepage from "./pages/Homepage";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Speaking from "./pages/Speaking";
 import Programs from "./pages/Programs";
+import LMSPortal from "./pages/LMSPortal";
+import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import Events from "./pages/Events";
+import Testimonials from "./pages/Testimonials";
+import FAQ from "./pages/FAQ";
+import Partnerships from "./pages/Partnerships";
+import BlogDetail from "./pages/BlogDetails";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -23,16 +28,40 @@ const App = () => {
           element: <About />,
         },
         {
-          path: "speaking",
-          element: <Speaking />,
-        },
-        {
           path: "programs",
           element: <Programs />,
         },
         {
+          path: "lms-portal",
+          element: <LMSPortal />,
+        },
+        {
           path: "blog",
           element: <Blog />,
+          children: [
+            {
+              path: ":blogId",
+              id: "blog-detail",
+              element: <BlogDetail />,
+            },
+          ],
+        },
+
+        {
+          path: "events",
+          element: <Events />,
+        },
+        {
+          path: "testimonials",
+          element: <Testimonials />,
+        },
+        {
+          path: "faq",
+          element: <FAQ />,
+        },
+        {
+          path: "partnership",
+          element: <Partnerships />,
         },
         {
           path: "contact",

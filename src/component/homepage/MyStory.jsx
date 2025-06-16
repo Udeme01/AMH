@@ -4,14 +4,14 @@ import { WORK_DRIVES } from "../../data/workDrives";
 
 const MyStory = () => {
   return (
-    <section id="about" className="py-10 bg-white font-montserrat">
+    <section id="about" className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="space-y-8">
             {/* Personal quote section */}
             <div className="bg-gradient-to-br from-[#f7cca5]/20 to-[#2a37a7]/10 p-8 rounded-2xl border-l-4 border-[#2a37a7]">
               <Quote className="w-8 h-8 text-[#2a37a7] mb-4" />
-              <blockquote className="text-xl italic text-gray-800 leading-relaxed mb-4">
+              <blockquote className="text-size-base italic text-black leading-h-normal tracking-body mb-4">
                 "I discovered that the gap between knowing the law and living it
                 successfully was where most people got stuck. That's where I
                 found my calling."
@@ -21,12 +21,12 @@ const MyStory = () => {
                   <span className="text-white font-bold">AH</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">
+                  <h4 className="font-medium text-black text-size-base">
                     Ace Mediation Hub
-                  </div>
-                  <div className="text-sm text-gray-600">
+                  </h4>
+                  <p className="text-xs text-gray-600">
                     Founder & Lead Mediator
-                  </div>
+                  </p>
                 </div>
               </div>
             </div>
@@ -37,10 +37,10 @@ const MyStory = () => {
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-size-xl font-semibold text-black mb-2">
                     My Background
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="font-regular text-size-sm leading-h-base tracking-body">
                     With over a decade in legal practice and community
                     development, I've witnessed firsthand how legal complexity
                     can either empower or intimidate. My mission became clear:
@@ -55,10 +55,10 @@ const MyStory = () => {
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-size-xl font-semibold text-black mb-2">
                     My Approach
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="font-regular text-size-sm leading-h-base tracking-body">
                     I believe in soft authority—guiding with wisdom rather than
                     commanding with power. Every interaction is about
                     empowerment, knowledge transfer, and building lasting
@@ -72,10 +72,10 @@ const MyStory = () => {
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-size-xl font-semibold text-black mb-2">
                     My Impact
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="font-regular text-size-sm leading-h-base tracking-body">
                     From resolving complex conflicts to building ethical
                     leaders, my work spans individual transformation to
                     community empowerment. Each success story reinforces my

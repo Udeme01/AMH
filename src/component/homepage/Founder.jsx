@@ -14,34 +14,34 @@ const Founder = () => {
           />
         </section>
         <section className="px-6 py-6">
-          <h1 className="text-sm px-6 font-regular capitalize text-center text-gray-600 mb-2">
+          <h1 className="text-size-sm px-6 mb-3 leading-h-base font-regular capitalize text-center tracking-body">
             my story
           </h1>
-          <h1 className="text-2xl mb-6 font-semibold text-center tracking-wide text-gray-800">
+          <h2 className="text-size-3xl tracking-display leading-h-display mb-6 font-semibold text-center">
             From Life to Transformation
-          </h1>
+          </h2>
 
-          <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p className="font-light">
+          <div className="space-y-4 font-regular leading-h-base tracking-body text-size-sm">
+            <p>
               My journey began with a simple realization: knowing the rules
               isn't enough. True empowerment comes from understanding how to
               apply them with clarity and purpose.
             </p>
 
-            <p className="font-light">
+            <p>
               In a world that often overwhelms, misguides, or silences your true
               voice, you must remember this: you were born with purpose, and you
               deserve clarity, peace, and the power to lead well.
             </p>
 
-            <p className="font-light">
+            <p>
               At Ace Mediation Hub, we believe that leadership starts with
               understanding yourself, your story, and the systems around you.
               You are not just a hustler, a professional, or a local voice, you
               are a potential force for peace, structure and legacy.
             </p>
 
-            <p className="font-light">
+            <p>
               My team and I are here to walk with you, to help you build with
               clarity, lead with peace, and grow with purpose. Through
               mediation, legal literacy, strategic education, and ethical
@@ -49,13 +49,13 @@ const Founder = () => {
               large rise, not just with noise, but with wisdom.
             </p>
 
-            <p className="font-light">
+            <p>
               You are not alone on this journey. You are part of a growing
               community of thinkers, builders, and bridge-makers. And you belong
               here.
             </p>
 
-            <p className="font-light">
+            <p>
               To your clarity and impact,{" "}
               <span className="block font-semibold mt-2">Mr. AdePeters.</span>{" "}
               <span className="text-sm text-gray-600">
@@ -64,7 +64,7 @@ const Founder = () => {
             </p>
           </div>
 
-          <button className="w-full bg-blue-900 text-white sm:w-auto px-8 py-3 text-lg font-regular capitalize tracking-wide cursor-pointer mt-8 transition-all duration-500 hover:text-white hover:shadow-lg hover:scale-95">
+          <button className="w-full text-base tracking-cta leading-h-base rounded bg-blue-950 text-white sm:w-auto px-8 py-3 font-regular capitalize cursor-pointer mt-8 hover:text-white transition duration-500 hover:shadow-lg hover:scale-95 hover:bg-blue-900">
             More about me
           </button>
         </section>

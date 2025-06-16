@@ -1,27 +1,27 @@
-import founder from "/assets/images/ade.jpg";
+import founder from "/assets/images/ade.avif";
 
 const Hero = () => {
   return (
     <main>
       {/* Mobile Hero - keeps your original design */}
-      <section className="md:hidden relative bg-[url('/assets/images/gather.jpg')] bg-cover bg-no-repeat bg-center w-full h-screen font-montserrat">
-        <div className="bg-black/40 absolute top-0 right-0 bottom-0 left-0">
+      <section className="md:hidden relative bg-[url('/assets/images/gather.avif')] bg-cover bg-no-repeat bg-center w-full h-screen">
+        <div className="bg-black/50 absolute top-0 right-0 bottom-0 left-0">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-between w-full mx-auto h-[60vh]">
-            <div>
-              <h1 className="text-3xl px-6 mb-3 font-medium text-center w-full text-white">
+            <section className="text-white text-center px-6">
+              <h1 className="text-size-display tracking-display leading-h-display font-semibold">
                 Building with <span className="text-yellow-400">clarity</span>,
                 makes you <span className="text-yellow-400">unstoppable</span>.
               </h1>
-              <p className="text-xs mt-2 font-bold uppercase w-full text-center text-white">
+              <p className="text-size-sm font-regular leading-h-base mt-3">
                 Unlock Your Authentic Leadership Through Mindful Empowerment
               </p>
-            </div>
+            </section>
 
-            <section className="w-[65%] p-6 flex flex-col justify-center">
-              <button className="py-3 text-lg font-semibold capitalize tracking-wide cursor-pointer bg-blue-950 text-white rounded transition duration-500 hover:scale-95 hover:bg-blue-900">
+            <section className="w-[55%] p-6 flex flex-col justify-center gap-3">
+              <button className="py-3 text-base capitalize tracking-cta leading-h-base cursor-pointer bg-blue-950 text-white rounded transition duration-500 hover:scale-95 hover:bg-blue-900">
                 Explore your path
               </button>
-              <button className="outline text-white px-6 py-3 mt-6 text-lg font-semibold capitalize tracking-wide cursor-pointer transition duration-500 hover:scale-95 hover:bg-blue-900 hover:outline-none">
+              <button className="text-white text-base bg-blue-950 py-3 capitalize rounded tracking-cta leading-h-base cursor-pointer transition duration-500 hover:scale-95 hover:bg-blue-900">
                 Watch my story
               </button>
             </section>
@@ -30,7 +30,7 @@ const Hero = () => {
       </section>
 
       {/* Desktop Hero - new minimalistic design */}
-      <section className="hidden md:flex min-h-screen relative font-montserrat bg-[url('/assets/images/ade.jpg')] bg-cover bg-center bg-no-repeat">
+      <section className="hidden md:flex min-h-screen relative font-montserrat bg-[url('/assets/images/ade.avif')] bg-cover bg-top bg-no-repeat">
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/75"></div>
         <div className="container mx-auto px-8 lg:px-12 flex items-center relative z-10">
@@ -57,14 +57,13 @@ const Hero = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button className="group px-8 py-4 bg-blue-600 text-white font-medium rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 transform hover:-translate-y-0.5">
-                  <span className="group-hover:tracking-wide transition-all duration-300">
-                    Explore Your Path
-                  </span>
+                  Explore Your Path
                 </button>
 
                 <button className="px-8 py-4 border-2 border-slate-300 text-slate-700 font-medium rounded-lg transition-all duration-300 hover:border-blue-600 hover:text-blue-600 hover:shadow-md transform hover:-translate-y-0.5">
                   Watch My Story
                 </button>
+                 
               </div>
             </div>
 

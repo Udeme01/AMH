@@ -1,10 +1,12 @@
 @import "tailwindcss";
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
 
+/* Font definitions */
 @theme {
   --font-montserrat: "Montserrat", "sans-serif";
+  --font-inter: "Inter", "sans-serif";
 }
 
+/* Font weights */
 @theme {
   --font-weight-thin: 100;
   --font-weight-extraLight: 200;
@@ -15,13 +17,72 @@
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
+  --font-weight-extrablack: 1000;
 }
 
+/* Color palette */
 @theme {
   --color-cream: #f7cca5;
   --color-blue: #2a37a7;
-
   --color-cloudWhite: #f1f1f1;
   --color-skyBlue: #87ceeb;
   --color-sunflowerYellow: #d3af37;
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
+
+/* Typography scale - add consistent font sizes */
+@theme {
+  --text-size-xs: 0.75rem;
+  --text-size-sm: 0.875rem;
+  --text-size-base: 1rem;
+  --text-size-lg: 1.125rem;
+  --text-size-xl: 1.25rem;
+  --text-size-2xl: 1.5rem;
+  --text-size-3xl: 1.875rem;
+  --text-size-display: 2.25rem;
+  --text-size-5xl: 3rem;
+  --text-size-6xl: 3.75rem;
+}
+
+/* Line heights for consistency */
+@theme {
+  --spacing-h-display: 40px;
+  --spacing-h-base: 20px;
+  --spacing-h-normal: 30px;
+}
+
+/* Letter spacing */
+@theme {
+  --tracking-display: -1px;
+  --tracking-body: 0px;
+  --tracking-cta: 1px;
+}
+
+/* Font face declarations */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./typography/fonts/Montserrat.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./typography/fonts/Roboto.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom base styles (only if you need to override Tailwind defaults) */
+@layer base {
+  body {
+    font-family: var(--font-montserrat);
+  }
+}
+
+/* <h3 className="text-size-base leading-h-base font-semibold uppercase">
+                leadership
+              </h3> */

@@ -1,17 +1,15 @@
-import { faX } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router";
 import { NAV_LINKS } from "../../data/navLinks";
 
-const MobileNav = ({ isOpen, onClose, navLinks }) => {
+const MobileNav = ({ isOpen }) => {
   if (!isOpen) return null;
 
   return (
     <>
       {/* Mobile Menu */}
-      <div className={`fixed z-50 bg-white right-0 left-0 font-montserrat`}>
+      <div className={`fixed right-0 left-0 top-20 z-50 bg-white`}>
         {/* Header */}
-        <div className="bg-slate-900 text-white p-6">
+        {/* <div className="bg-slate-900 text-white p-6">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-xl font-bold">Ace Leadership Hub</h2>
@@ -19,15 +17,14 @@ const MobileNav = ({ isOpen, onClose, navLinks }) => {
             </div>
             <button
               className="w-10 h-10 border border-white/5 cursor-pointer"
-              //   aria-label="Close menu"
             >
               <FontAwesomeIcon icon={faX} className="w-full h-full" />
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Navigation Content */}
-        <div className="flex flex-col h-full overflow-y-auto">
+        <div className="flex flex-col h-full overflow-y-auto lg:hidden">
           {/* Main Navigation */}
           <nav className="flex-1 py-6">
             <ul className="space-y-2 px-4">

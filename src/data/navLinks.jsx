@@ -4,23 +4,39 @@ export const NAV_LINKS = [
     linkTo: "/",
   },
   {
-    linkName: "About",
+    linkName: "About Us",
     linkTo: "about",
-  },
-  {
-    linkName: "Speaking",
-    linkTo: "speaking",
   },
   {
     linkName: "Programs",
     linkTo: "programs",
   },
   {
-    linkName: "Blog",
+    linkName: "LMS Portal",
+    linkTo: "lms-portal",
+  },
+  {
+    linkName: "Blog/Insights",
     linkTo: "blog",
   },
   {
-    linkName: "Contact",
+    linkName: "Events and Workshops",
+    linkTo: "events",
+  },
+  {
+    linkName: "Testimonials",
+    linkTo: "testimonials",
+  },
+  {
+    linkName: "FAQs",
+    linkTo: "faq",
+  },
+  {
+    linkName: "Partnership",
+    linkTo: "partnership",
+  },
+  {
+    linkName: "Contact Us",
     linkTo: "contact",
   },
 ];
