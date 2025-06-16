@@ -4,28 +4,36 @@ const Hero = () => {
   return (
     <main>
       {/* Mobile Hero - keeps your original design */}
-      <section className="md:hidden relative bg-[url('/assets/images/gather.avif')] bg-cover bg-no-repeat bg-center w-full h-screen">
-        <div className="bg-black/50 absolute top-0 right-0 bottom-0 left-0">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-between w-full mx-auto h-[60vh]">
-            <section className="text-white text-center px-6">
-              <h1 className="text-size-display tracking-display leading-h-display font-semibold">
-                Building with <span className="text-yellow-400">clarity</span>,
-                makes you <span className="text-yellow-400">unstoppable</span>.
-              </h1>
-              <p className="text-size-sm font-regular leading-h-base mt-3">
-                Unlock Your Authentic Leadership Through Mindful Empowerment
-              </p>
-            </section>
-
-            <section className="w-[55%] p-6 flex flex-col justify-center gap-3">
-              <button className="py-3 text-base capitalize tracking-cta leading-h-base cursor-pointer bg-blue-950 text-white rounded transition duration-500 hover:scale-95 hover:bg-blue-900">
-                Explore your path
-              </button>
-              <button className="text-white text-base bg-blue-950 py-3 capitalize rounded tracking-cta leading-h-base cursor-pointer transition duration-500 hover:scale-95 hover:bg-blue-900">
-                Watch my story
-              </button>
-            </section>
-          </div>
+      {/* Hero Section */}
+      <section className="relative bg-[url('/assets/images/gather.avif')] bg-cover bg-no-repeat bg-center text-white py-32 text-center overflow-hidden">
+        <div
+          className="absolute bg-black/70 top-0 right-0 bottom-0 left-0"
+          style={{
+            top: "-50%",
+            left: "-50%",
+            width: "200%",
+            height: "200%",
+          }}
+        />
+        <div
+          className="relative z-10 max-w-6xl mx-auto px-8"
+          style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+        >
+          <h1 className="text-size-display md:text-7xl font-black mb- tracking-display uppercase">
+            Build with clarity
+            <br />
+            makes you unstoppable
+          </h1>
+          <p className="text-size-sm md:text-2xl font-light opacity-90 max-w-3xl mx-auto mb-6 tracking-wide">
+            Join ACE Leadership Hub in developing the next generation of
+            empathetic leaders across law, mediation, and community development.
+          </p>
+          <button
+            onClick={() => scrollToSection("contact-form")}
+            className="inline-block px-12 py-5 bg-white text-black font-bold text-lg uppercase tracking-widest border-3 border-white transition-all duration-400 hover:bg-transparent hover:text-white hover:-translate-y-1 hover:shadow-2xl cursor-pointer"
+          >
+            Explore Your Path
+          </button>
         </div>
       </section>
 
@@ -63,7 +71,6 @@ const Hero = () => {
                 <button className="px-8 py-4 border-2 border-slate-300 text-slate-700 font-medium rounded-lg transition-all duration-300 hover:border-blue-600 hover:text-blue-600 hover:shadow-md transform hover:-translate-y-0.5">
                   Watch My Story
                 </button>
-                 
               </div>
             </div>
 

@@ -6,7 +6,6 @@ import {
   User,
   Clock,
   ArrowRight,
-  Play,
 } from "lucide-react";
 import { Link } from "react-router";
 import { BLOG_POSTS } from "../data/blogposts";
@@ -61,23 +60,23 @@ const Blog = () => {
             {/* Content */}
             <div className="space-y-6">
               <div className="flex items-center space-x-2">
-                <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="bg-blue text-white text-size-xs font-semibold px-3 py-1 rounded-full">
                   {currentPost?.category}
                 </span>
-                <span className="text-gray-500 text-sm">
+                <span className="text-black/50 text-size-xs">
                   {currentPost?.date}
                 </span>
               </div>
 
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+              <h2 className="text-size-display font-size-semibold leading-h-display tracking-display">
                 {currentPost?.title}
               </h2>
 
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-size-base text-black/50 leading-h-base tracking-body">
                 {currentPost?.excerpt}
               </p>
 
-              <div className="flex items-center space-x-6 text-sm text-gray-500">
+              <div className="flex items-center space-x-6 text-sm text-black/50">
                 <div className="flex items-center space-x-2">
                   <User className="w-4 h-4" />
                   <span>{currentPost?.author}</span>
@@ -92,15 +91,11 @@ const Blog = () => {
                 {/* FIXED: Use consistent path format */}
                 <Link
                   to={`/blog/${currentPost?.id}`}
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2"
+                  className="bg-blue text-white px-6 py-3 rounded transition flex items-center space-x-2 duration-500 hover:scale-95"
                 >
                   <span>Read Article</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                {/* <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center space-x-2">
-                  <Play className="w-4 h-4" />
-                  <span>Watch</span>
-                </button> */}
               </div>
             </div>
 
@@ -148,17 +143,17 @@ const Blog = () => {
       </section>
 
       {/* Categories */}
-      <section className="bg-white border-t border-gray-200">
+      <section className="bg-white border-t border-black/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-4 py-2 rounded-full text-sm font-regular transition-all ${
                   selectedCategory === category
-                    ? "bg-blue-600 text-white shadow-sm"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "bg-blue text-white shadow-sm"
+                    : "bg-black/5 text-black/80 hover:bg-black/10"
                 }`}
               >
                 {category}
@@ -188,17 +183,17 @@ const Blog = () => {
 
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded">
+                    <span className="bg-black/5 text-black/50 text-size-xs font-medium px-2 py-1 rounded">
                       {post.category}
                     </span>
-                    <span className="text-gray-500 text-sm">{post.date}</span>
+                    <span className="text-black/50 text-size-sm">{post.date}</span>
                   </div>
 
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-size-lg font-semibold text-black/80 mb-2 line-clamp-2">
                     {post.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  <p className="text-black/50 text-size-sm mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
 
