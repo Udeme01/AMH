@@ -11,16 +11,16 @@ export const NAV_LINKS = [
     linkName: "Programs",
     linkTo: "programs",
   },
+  // {
+  //   linkName: "LMS Portal",
+  //   linkTo: "lms-portal",
+  // },
   {
-    linkName: "LMS Portal",
-    linkTo: "lms-portal",
-  },
-  {
-    linkName: "Blog/Insights",
+    linkName: "Blog",
     linkTo: "blog",
   },
   {
-    linkName: "Events and Workshops",
+    linkName: "Events",
     linkTo: "events",
   },
   {

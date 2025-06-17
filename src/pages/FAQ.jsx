@@ -20,10 +20,10 @@ const FAQ = () => {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-size-display font-semibold leading-h-display text-black/80 mb-3">
             Frequently Asked Questions
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-size-base text-black/60">
             Learn about leadership, empathy, mediation, negotiation, and peace
             building
           </p>

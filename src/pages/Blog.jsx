@@ -224,7 +224,7 @@ const Blog = () => {
       <section className="my-3">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
+            <h3 className="text-size-2xl font-bold mb-4">Stay Updated</h3>
             <p className="mb-8 max-w-2xl mx-auto">
               Get the latest insights delivered straight to your inbox. No spam,
               just quality content.
@@ -234,7 +234,7 @@ const Blog = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-1 focus:ring-white outline-none text-gray-900"
+                className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-1 focus:ring-black/10 outline-none text-gray-900"
               />
               <button className="text-white bg-black px-6 py-3 rounded-lg font-semibold transition duration-500 hover:scale-95 cursor-pointer">
                 Subscribe

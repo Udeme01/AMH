@@ -10,7 +10,7 @@ const MobileNav = ({ isOpen }) => {
 
   return (
     <section className="bg-black0 backdrop:blur-sm z-50 fixed top-0 right-0 bottom-0 left-0">
-      <nav className="fixed top-20 right-0 left-0 bottom-0 bg-white overflow-y-auto">
+      <nav className="fixed top-24 right-0 left-0 bottom-0 bg-white overflow-y-auto lg:hidden">
         <ul>
           {NAV_LINKS.map((navLink, index) => {
             const { linkName, linkTo } = navLink;

@@ -213,7 +213,7 @@ const Contact = () => {
                 ></textarea>
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-700 transition-all duration-500 flex items-center justify-center gap-2 transform hover:scale-95 cursor-pointer"
+                  className="w-full bg-black text-white px-6 py-3 rounded-lg font-semibold transition duration-500 flex items-center justify-center gap-2 transform hover:scale-95 cursor-pointer"
                 >
                   <Send className="w-5 h-5" />
                   Send Message
@@ -390,7 +390,7 @@ const Contact = () => {
       </section>
 
       {/* Trust Signals */}
-      <section className="py-16 px-4 mb-16 bg-gray-900 text-white">
+      <section className="py-16 px-4 mb-16 bg-black/95 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

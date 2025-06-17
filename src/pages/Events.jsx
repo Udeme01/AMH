@@ -78,7 +78,7 @@ const Events = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans">
+    <div>
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
@@ -135,17 +135,16 @@ const Events = () => {
       `}</style>
 
       {/* Hero Section */}
-      <section className="bg-[url('/assets/images/gather.avif')] bg-cover bg-no-repeat bg-center text-white py-24 relative overflow-hidden">
+      <section className="bg-[url('/assets/images/gather.avif')] bg-cover bg-no-repeat bg-center text-white min-h-[50vh] lg:min-h-[70vh] relative overflow-hidden">
         <div className="absolute top-0 right-0 bottom-0 left-0 bg-black/70" />
         <div
-          className="relative z-10 max-w-6xl mx-auto px-6 text-center"
+          className="max-w-6xl mx-auto px-8 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full py-10"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         >
-          <h1 className="text-size-display md:text-7xl font-black mb-1 tracking-display leading-h-display">
-            Events &<br />
-            <span className="text-gray-300">Workshops</span>
+          <h1 className="text-size-display md:text-5xl font-black mb-1 tracking-display">
+            Events & Workshops
           </h1>
-          <p className="text-size-sm md:text-2xl font-light opacity-90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-size-sm md:text-size-lg font-light opacity-90 max-w-3xl mx-auto tracking-wide">
             Join our community of emerging leaders through transformative
             learning experiences
           </p>
@@ -402,12 +401,10 @@ const Events = () => {
       )}
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 text-black">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-1">
-            Never Miss an Event
-          </h2>
-          <p className="text-size-sm opacity-90 mb-8 max-w-2xl mx-auto">
+          <h3 className="text-size-2xl font-bold mb-4">Never Miss an Event</h3>
+          <p className="mb-8 max-w-2xl mx-auto">
             Get early access to registrations and exclusive updates on our
             latest workshops and events
           </p>
@@ -415,9 +412,9 @@ const Events = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-6 py-3 rounded-lg text-white font-medium focus:outline-none focus:border-none focus:ring-1 focus:ring-white"
+              className="flex-1 px-6 py-3 rounded-lg text-black font-medium focus:outline-none focus:border-none focus:ring-1 focus:ring-black/10"
             />
-            <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-500 cursor-pointer hover:scale-105">
+            <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold transition duration-500 cursor-pointer hover:scale-95">
               Subscribe
             </button>
           </div>

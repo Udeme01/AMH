@@ -6,25 +6,17 @@ const Hero = () => {
       {/* Mobile Hero - keeps your original design */}
       {/* Hero Section */}
       <section className="relative bg-[url('/assets/images/gather.avif')] bg-cover bg-no-repeat bg-center text-white py-32 text-center overflow-hidden">
-        <div
-          className="absolute bg-black/70 top-0 right-0 bottom-0 left-0"
-          style={{
-            top: "-50%",
-            left: "-50%",
-            width: "200%",
-            height: "200%",
-          }}
-        />
+        <div className="absolute bg-black/70 top-0 right-0 bottom-0 left-0"/>
         <div
           className="relative z-10 max-w-6xl mx-auto px-8"
           style={{ transform: `translateY(${scrollY * 0.5}px)` }}
         >
-          <h1 className="text-size-display md:text-7xl font-black mb- tracking-display uppercase">
+          <h1 className="text-size-display md:text-5xl font-black tracking-display uppercase text-center">
             Build with clarity
             <br />
             makes you unstoppable
           </h1>
-          <p className="text-size-sm md:text-2xl font-light opacity-90 max-w-3xl mx-auto mb-6 tracking-wide">
+          <p className="text-size-sm md:text-size-lg font-light opacity-90 max-w-3xl mx-auto mb-6 tracking-wide">
             Join ACE Leadership Hub in developing the next generation of
             empathetic leaders across law, mediation, and community development.
           </p>

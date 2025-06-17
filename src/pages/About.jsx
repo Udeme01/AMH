@@ -108,9 +108,10 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white font-montserrat">
       {/* Hero Section */}
-      <section className="relative bg-[url('/assets/images/ade.jpg')] bg-cover bg-center bg-no-repeat pt-40 md:pt-40 pb-12 md:pb-20 lg:pb-32">
+      <section className="relative bg-[url('/assets/images/gather.avif')] bg-cover bg-center bg-no-repeat pt-40 md:pt-40 pb-12 md:pb-20 lg:pb-32">
         {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/90 to-white/85"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/90 to-white/20"></div> */}
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           {/* Mobile Layout */}
@@ -125,26 +126,20 @@ const About = () => {
             </div>
 
             {/* Text Content */}
-            <div className="space-y-6">
+            <div className="space-y-5 text-white">
               <div className="mb-4">
                 <span className="inline-block px-4 py-2 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full">
                   TRANSFORMATIONAL LEADERSHIP
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl font-light leading-tight text-slate-900">
-                Building{" "}
-                <span className="font-semibold text-blue-600">
-                  Authentic Leaders
-                </span>
+              <h1 className="text-size-display font-black leading-h-display tracking-display uppercase">
+                Building <span>Authentic Leaders</span>
                 <br />
-                Who{" "}
-                <span className="font-semibold text-blue-600">
-                  Transform Communities
-                </span>
+                Who <span>Transform Communities</span>
               </h1>
 
-              <p className="text-lg text-slate-600 leading-relaxed max-w-lg mx-auto">
+              <p className="text-size-sm font-light leading-h-base max-w-lg mx-auto">
                 Through mediation, empathy, and purposeful empowerment, we help
                 youth, creatives, and working professionals discover who they're
                 meant to be and speak their truth with confidence.
@@ -170,26 +165,20 @@ const About = () => {
             </div>
 
             {/* Text Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 text-white">
               <div className="mb-6">
                 <span className="inline-block px-4 py-2 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full">
                   TRANSFORMATIONAL LEADERSHIP
                 </span>
               </div>
 
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light leading-tight text-slate-900">
-                Building{" "}
-                <span className="font-semibold text-blue-600">
-                  Authentic Leaders
-                </span>
+              <h1 className="text-size-display lg:text-5xl xl:text-6xl font-black tracking-display uppercase">
+                Building <span>Authentic Leaders</span>
                 <br />
-                Who{" "}
-                <span className="font-semibold text-blue-600">
-                  Transform Communities
-                </span>
+                Who <span>Transform Communities</span>
               </h1>
 
-              <p className="text-xl lg:text-2xl text-slate-600 leading-relaxed">
+              <p className="text-white md:text-size-lg md:font-light md:opacity-90 tracking-wide">
                 Through mediation, empathy, and purposeful empowerment, we help
                 youth, creatives, and working professionals discover who they're
                 meant to be and speak their truth with confidence.
@@ -208,10 +197,12 @@ const About = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   <stat.icon className="w-8 h-8" />
                 </div>
-                <div className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
+                <div className="text-size-3xl font-bold text-black/80 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-slate-600 font-medium">{stat.label}</div>
+                <p className="text-black/50 text-size-sm font-medium">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
@@ -224,7 +215,7 @@ const About = () => {
           <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-8">
             OUR VISION
           </span>
-          <h2 className="text-2xl text-justify lg:text-4xl font-light text-slate-900 mb-8 max-w-4xl mx-auto leading-tight">
+          <h2 className="text-size-xl text-justify lg:text-4xl font-light text-slate-900 mb-8 max-w-4xl mx-auto leading-tight">
             To build a <span className="font-semibold text-blue-600">just</span>
             , <span className="font-semibold text-blue-600">peaceful</span>, and{" "}
             <span className="font-semibold text-blue-600">
@@ -240,7 +231,7 @@ const About = () => {
               ethical leadership
             </span>{" "}
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-size-base text-left text-black/70 max-w-2xl mx-auto">
             We envision a generation of leaders who understand that true
             influence comes not from perfection, but from the courage to be
             authentically themselves while serving others with integrity and
@@ -257,7 +248,7 @@ const About = () => {
               <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 text-sm font-semibold rounded-full mb-4">
                 THE JOURNEY
               </span>
-              <h2 className="text-3xl lg:text-4xl font-light text-slate-900 mb-6">
+              <h2 className="text-size-3xl lg:text-4xl text-slate-900 mb-6 tracking-display leading-h-display font-semibold text-center">
                 From{" "}
                 <span className="font-semibold text-blue-600">Silence</span> to
                 <span className="font-semibold text-blue-600">
@@ -272,7 +263,7 @@ const About = () => {
                 <div className="flex items-start gap-4">
                   <Quote className="w-8 h-8 text-blue-400 flex-shrink-0 mt-1" />
                   <div className="space-y-6 text-slate-700 leading-relaxed">
-                    <p className="text-xl font-medium text-slate-900 italic">
+                    <p className="text-size-xl font-medium textt-black/60 italic">
                       "I used to be the person who had brilliant ideas but
                       couldn't find the courage to share them. I was the one who
                       saw solutions but feared being labeled as 'too much' or
@@ -316,7 +307,7 @@ const About = () => {
                       share their gifts with confidence and impact.
                     </p>
 
-                    <p className="text-xl font-medium text-slate-900 border-l-4 border-blue-400 pl-6 italic">
+                    <p className="text-size-xl font-medium text-black/60 border-l-4 border-blue pl-6 italic">
                       "Your background doesn't disqualify you from greatness—it
                       qualifies you for a unique kind of leadership that only
                       you can provide."
@@ -337,7 +328,7 @@ const About = () => {
                 <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-4">
                   THE MISSION
                 </span>
-                <h2 className="text-3xl lg:text-4xl font-light text-slate-900 leading-tight mb-6">
+                <h2 className="text-size-3xl font-semibold leading-h-display tracking-display mb-6">
                   Empowering the{" "}
                   <span className="font-semibold text-blue-600">
                     Next Generation
@@ -350,7 +341,7 @@ const About = () => {
                 </h2>
               </div>
 
-              <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+              <div className="space-y-6 text-size-base text-slate-600 leading-relaxed">
                 <p>
                   At{" "}
                   <strong className="text-slate-900">ACE Leadership Hub</strong>
@@ -386,13 +377,6 @@ const About = () => {
                   leadership—but your life.
                 </p>
               </div>
-
-              <div className="pt-4">
-                <button className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group">
-                  Learn More About Our Approach
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
             </div>
 
             {/* Image */}
@@ -420,12 +404,12 @@ const About = () => {
             <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-4">
               CORE VALUES
             </span>
-            <h2 className="text-3xl lg:text-4xl font-light text-slate-900 mb-6">
+            <h2 className="text-size-3xl font-semibold leading-h-display tracking-display mb-3">
               The{" "}
               <span className="font-semibold text-blue-600">Principles</span>{" "}
               That Guide Us
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-size-base text-black/60 max-w-2xl mx-auto">
               Every program, workshop, and interaction is built on these
               foundational values that drive real transformation.
             </p>
@@ -459,7 +443,7 @@ const About = () => {
             <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 text-sm font-semibold rounded-full mb-4">
               TESTIMONIALS
             </span>
-            <h2 className="text-3xl lg:text-4xl font-light text-slate-900 mb-6">
+            <h2 className="text-size-3xl font-semibold leading-h-display tracking-display mb-6">
               <span className="font-semibold text-blue-600">Real Stories</span>{" "}
               of Transformation
             </h2>
@@ -506,13 +490,13 @@ const About = () => {
             <span className="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 text-sm font-semibold rounded-full mb-4">
               HOW WE SERVE
             </span>
-            <h2 className="text-3xl lg:text-4xl font-light mb-6">
+            <h2 className="text-size-3xl font-semibold leading-h-display tracking-display mb-3">
               <span className="font-semibold text-yellow-400">
                 Transformational
               </span>{" "}
               Programs & Services
             </h2>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            <p className="text-size-base text-slate-300 max-w-2xl mx-auto">
               Comprehensive solutions designed to unlock authentic leadership
               potential across all levels of society.
             </p>
@@ -549,7 +533,7 @@ const About = () => {
               <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full mb-4">
                 MEET THE FOUNDER
               </span>
-              <h2 className="text-3xl lg:text-4xl font-light text-slate-900 mb-6">
+              <h2 className="text-size-3xl leading-h-display tracking-display font-semibold mb-6">
                 The Man Behind the{" "}
                 <span className="font-semibold text-blue-600">Movement</span>
               </h2>
@@ -569,9 +553,9 @@ const About = () => {
 
               {/* Content */}
               <div className="lg:col-span-2 space-y-8">
-                <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
+                <div className="space-y-6 text-size-base text-black/60 leading-h-normal">
                   <p>
-                    <strong className="text-slate-900">
+                    <strong className="text-black/80">
                       A certified mediator, leadership coach, and empowerment
                       advocate
                     </strong>{" "}
@@ -605,10 +589,10 @@ const About = () => {
                 {/* Credentials */}
                 <div className="grid md:grid-cols-2 gap-6 pt-8 border-t border-slate-200">
                   <div>
-                    <h4 className="font-semibold text-slate-900 mb-3">
+                    <h4 className="font-semibold mb-3">
                       Education & Certifications
                     </h4>
-                    <ul className="space-y-2 text-slate-600">
+                    <ul className="space-y-2 text-black/60">
                       <li>• Certified Professional Mediator</li>
                       <li>• Executive Leadership Coach</li>
                       <li>• Conflict Resolution Specialist</li>
@@ -617,10 +601,8 @@ const About = () => {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-slate-900 mb-3">
-                      Recognition & Impact
-                    </h4>
-                    <ul className="space-y-2 text-slate-600">
+                    <h4 className="font-semibold mb-3">Recognition & Impact</h4>
+                    <ul className="space-y-2 text-black/60">
                       <li>• Featured in 20+ publications</li>
                       <li>• Keynote speaker at 100+ events</li>
                       <li>• Mentored 500+ emerging leaders</li>
@@ -630,14 +612,14 @@ const About = () => {
                 </div>
 
                 {/* Personal Quote */}
-                <div className="bg-white p-6 rounded-xl border-l-4 border-blue-400">
-                  <p className="text-lg italic text-slate-700 mb-2">
+                <div className="bg-white p-6 rounded-xl border-l-4 border-blue">
+                  <p className="text-lg italic text-black/60 mb-2">
                     "My mission is simple: to help you discover that the leader
                     you're looking for is already within you. You don't need to
                     become someone else—you need to become more of who you
                     already are."
                   </p>
-                  <div className="text-sm text-slate-500 font-medium">
+                  <div className="text-size-sm text-black/60 font-medium">
                     — Founder, ACE Leadership Hub
                   </div>
                 </div>

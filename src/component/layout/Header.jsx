@@ -59,14 +59,8 @@ const Header = () => {
 
   return (
     <>
-      <header
-        className={`${
-          isScrolled
-            ? "bg-slate-900/50 backdrop-blur-md shadow-lg"
-            : "bg-slate-900 py-2"
-        }`}
-      >
-        <div className="max-w-[1300px] mx-auto px-4 lg:py-6">
+      <header className="bg-slate-900 pt-6">
+        <div className="h-full max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between">
             {/* Logo/Brand */}
             <Link to="/">
@@ -83,20 +77,11 @@ const Header = () => {
               <DesktopNav />
             </div>
 
-            {/* Desktop CTA Button */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <a
-                href="#"
-                className="text-white hover:text-white/50 font-medium text-sm transition-colors"
-              >
-                Get In Touch
-              </a>
-              <a
-                href="#"
-                className="bg-white hover:bg-white/50 text-slate-900 text-[10px] px-4 py-2 rounded-full font-semibold transition-all hover:scale-95 shadow-md"
-              >
-                Book Discovery Call
-              </a>
+            {/* Speaking Badge */}
+            <div className="absolute top-2 right-6">
+              <div className="bg-white/50 text-white text-xs px-3 py-1 rounded-full font-semibold animate-pulse">
+                Available for Speaking
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
