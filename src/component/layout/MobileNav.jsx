@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { NAV_LINKS } from "../../data/navLinks";
 
 const MobileNav = ({ isOpen }) => {
@@ -18,12 +18,15 @@ const MobileNav = ({ isOpen }) => {
             return (
               <li key={index}>
                 <button className="w-full h-full flex items-center justify-between p-3 text-left text-slate-900 rounded-lg transition-colors font-medium">
-                  <Link
+                  <NavLink
                     to={linkTo}
-                    className="flex items-center space-x-3 px-3"
+                    className={({ isActive }) =>
+                      isActive ? "border-l-3 border-black/60 pl-3" : "flex items-center space-x-3 px-3"
+                    }
+                    end // this link will only be active only if the pah ends with a slash '/'...
                   >
                     {linkName}
-                  </Link>
+                  </NavLink>
                 </button>
               </li>
             );

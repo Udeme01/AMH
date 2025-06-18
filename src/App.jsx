@@ -12,12 +12,14 @@ import Testimonials from "./pages/Testimonials";
 import FAQ from "./pages/FAQ";
 import Partnerships from "./pages/Partnerships";
 import BlogDetail from "./pages/BlogDetails";
+import Error from "./pages/Error";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root />,
+      errorElement: <Error />,
       children: [
         {
           index: true,
@@ -38,15 +40,11 @@ const App = () => {
         {
           path: "blog",
           element: <Blog />,
-          children: [
-            {
-              path: ":blogId",
-              id: "blog-detail",
-              element: <BlogDetail />,
-            },
-          ],
         },
-
+        {
+          path: "/blog/:blogId",
+          element: <BlogDetail />,
+        },
         {
           path: "events",
           element: <Events />,

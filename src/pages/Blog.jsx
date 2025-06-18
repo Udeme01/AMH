@@ -12,6 +12,7 @@ import {
   SlidersHorizontal,
 } from "lucide-react";
 import { BLOG_POSTS } from "../data/blogposts";
+import { Link } from "react-router";
 
 const Blog = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -145,12 +146,16 @@ const Blog = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
+              {/* READ ARTICLE BTN */}
+              <Link
+                to={`${currentPost.id}`}
+                className="flex items-center space-x-4 w-fit"
+              >
                 <button className="bg-blue-600 text-white px-6 py-3 rounded-lg transition flex items-center space-x-2 hover:bg-blue-700">
                   <span>Read Article</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </div>
+              </Link>
             </div>
 
             {/* Image */}
@@ -355,7 +360,7 @@ const Blog = () => {
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
-                className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group cursor-pointer"
+                className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group"
               >
                 <div className="aspect-[16/10] overflow-hidden">
                   <img
@@ -393,9 +398,12 @@ const Blog = () => {
                       </div>
                     </div>
 
-                    <div className="text-blue-600 hover:text-blue-700 transition-colors">
+                    <Link
+                      to={`${post.id}`}
+                      className="text-blue-600 hover:text-blue-700 transition-colors"
+                    >
                       <ArrowRight className="w-4 h-4" />
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </article>

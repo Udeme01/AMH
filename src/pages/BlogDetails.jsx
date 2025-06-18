@@ -1,9 +1,14 @@
 import { useParams, useRouteLoaderData } from "react-router";
 
 const BlogDetails = () => {
-  const { blogId } = useParams();
-  const blogpost = useRouteLoaderData("blog-detail");
-  return <div>{blogId}</div>;
+  const params = useParams();
+  // const blogpost = useRouteLoaderData("blog-detail");
+  return (
+    <>
+      <div>{params.blogId}</div>
+      <p>blog detail page</p>
+    </>
+  );
 };
 
 export default BlogDetails;
