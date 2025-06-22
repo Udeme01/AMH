@@ -4,6 +4,7 @@ import { Squeeze as Hamburger } from "hamburger-react";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 import { Link } from "react-router";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,12 +60,12 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-slate-900 pt-6">
+      <header className="bg-slate-900 py-8">
         <div className="h-full max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between">
             {/* Logo/Brand */}
-            <Link to="/">
-              <h1 className="text-size-base font-semibold text-white leading-h-base">
+            <Link to="/" className="text-size-sm">
+              <h1 className="font-semibold text-white leading-h-base">
                 Ace Leadership Hub
               </h1>
               <p className="text-size-xs text-white/50">
@@ -84,6 +85,9 @@ const Header = () => {
               </div>
             </div>
 
+            <LanguageSwitcher />
+
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -101,7 +105,7 @@ const Header = () => {
         </div>
 
         {/* Top Banner (Optional) */}
-        <div className="text-white text-center font-light text-size-xs">
+        {/* <div className="text-white text-center font-light text-size-xs">
           <marquee
             ref={marqueeRef}
             onMouseEnter={handleMouseEnter}
@@ -115,7 +119,7 @@ const Header = () => {
               </Link>
             </p>
           </marquee>
-        </div>
+        </div> */}
       </header>
       <MobileNav
         isOpen={isMenuOpen}
